@@ -18,7 +18,6 @@ Which in hindsight makes sense, I wasn't connected to the vpn so when I hit that
 <details>
     <summary>lizzy@Donut:~/git$ sudo nmap -sS -A 10.10.10.28</summary>
 
-    ```
     Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-20 23:29 MDT
     Warning: 10.10.10.28 giving up on port because retransmission cap hit (10).
     Nmap scan report for 10.10.10.28
@@ -63,8 +62,7 @@ Which in hindsight makes sense, I wasn't connected to the vpn so when I hit that
 
     OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
     Nmap done: 1 IP address (1 host up) scanned in 234.23 seconds
-    ```
-    
+
 </details>
 <br>
 I cheated and looked at the walkthrough on this one because I got stuck connecting to the VPN. So the `nmap` command is from that walkthrough, but I want to break it down.
