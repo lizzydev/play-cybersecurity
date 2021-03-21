@@ -1,2 +1,6 @@
 # play-cybersecurity
-Notes around what I've learned and what I don't know in the world of cybersecurity.
+There's a lot to learn and I need a place to put what I find :)
+
+## Next Time:
+1. Review Nmap breakdown docs [here](#nmapBreakdown)
+2. Keep rolling with Oopsie machine
