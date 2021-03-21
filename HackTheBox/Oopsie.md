@@ -72,5 +72,5 @@ I cheated and looked at the walkthrough on this one because I got stuck connecti
 <br>
 `nmap -sS -A {IP Address}`
 * `-sS` : [TCP SYN scan](https://nmap.org/book/synscan.html)
-* * see other [port scanning techniques](https://nmap.org/book/man-port-scanning-techniques.html)
+  * see other [port scanning techniques](https://nmap.org/book/man-port-scanning-techniques.html)
 * `-A` : [Aggressive scan options](https://nmap.org/book/man-misc-options.html), to get more info than the default
