@@ -68,7 +68,6 @@ Which in hindsight makes sense, I wasn't connected to the vpn so when I hit that
 I cheated and looked at the walkthrough on this one because I got stuck connecting to the VPN. So the `nmap` command is from that walkthrough, but I want to break it down.
 
 ## Nmap Breakdown
-<a name="nmapBreakdown"></a>
 <br>
 `nmap -sS -A {IP Address}`
 * `-sS` : [TCP SYN scan](https://nmap.org/book/synscan.html)
