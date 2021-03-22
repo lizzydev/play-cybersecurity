@@ -71,5 +71,27 @@ I cheated and looked at the walkthrough on this one because I got stuck connecti
 <br>
 `nmap -sS -A {IP Address}`
 * `-sS` : [TCP SYN scan](https://nmap.org/book/synscan.html)
+  * SYN scans aka "half-open scanning" is the most common because it's quick and stealthy. It's not a complete TCP handshake.
+  * A filtered response indicates that the firewall possibly blocked the SYN or the host is unavailable.
   * see other [port scanning techniques](https://nmap.org/book/man-port-scanning-techniques.html)
-* `-A` : [Aggressive scan options](https://nmap.org/book/man-misc-options.html), to get more info than the default
+* `-A` : [Aggressive scan options](https://nmap.org/book/man-misc-options.html), to get more info than the default set including OS, traceroute, etc.
+
+### Other helpful options:
+* `--packet-trace` to understand how `nmap` generated its output, you can also increase the debug level (`-d` or `-d5`)
+* [Optimize performance](https://nmap.org/book/reduce-scantime.html) by scanning only what you need.
+
+---
+## OWASP Zap
+Now that I could hit the site, I didn't see anything obvious that I could get into, all of the links resolved to http://10.10.10.28/#, so that was a dead end. I thought about the email address but figured I was missing something and taking a look at the walkthrough I totally was! It pointed me towards using a service like [Burp](https://portswigger.net/burp) to get more information about the site/server.
+
+I wanted to use OWASP Zap because it looked cuter and my coworker recommended it alongside Burp: [OWASP Zed Attack Proxy](https://www.zaproxy.org/).
+
+I barely know what I'm doing, but I made my first actual on my own progress!
+
+Using OWASP Zap I ran a "Forced Browse Site" attack on the IP address using the `directory-list-1.0.txt` option and noticed:
+
+```
+Sun Mar 21 18:25:17 MDT 2021	Sun Mar 21 18:25:17 MDT 2021	GET	http://10.10.10.28:80/cdn-cgi/login/	200	OK	173	4679
+```
+
+Following that login url led me to their login page. Yay!

@@ -1,6 +1,9 @@
 # [Hack The Box](https://app.hackthebox.eu)
 ## Tools Needed
 * [OpenVPN](https://openvpn.net/)
+* [nmap](https://nmap.org/)
+* [OWASP Zap](https://www.zaproxy.org/)
+* [sqlmap](https://github.com/sqlmapproject/sqlmap)
 
 ## Misc
 Hack the box works by hosting vulnerable systems inside of a vpn.
